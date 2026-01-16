@@ -1,0 +1,27 @@
+/* React Vectoria - Icon Animations */
+@keyframes rv-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes rv-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+@keyframes rv-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-25%); }
+}
+@keyframes rv-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+@keyframes rv-ping {
+  75%, 100% { transform: scale(1.5); opacity: 0; }
+}
+
+.rv-spin { animation: rv-spin 1s linear infinite; }
+.rv-pulse { animation: rv-pulse 2s ease-in-out infinite; }
+.rv-bounce { animation: rv-bounce 1s ease-in-out infinite; }
+.rv-shake { animation: rv-shake 0.5s ease-in-out infinite; }
+.rv-ping { animation: rv-ping 1s cubic-bezier(0, 0, 0.2, 1) infinite; }
